@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Connecting… · RCBS Dashboard</title><meta name="robots" content="noindex"><style>body{font-family:-apple-system,Segoe UI,Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 16px;line-height:1.6;color:#1f2937}
+h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.6em}nav a{margin-right:14px}footer{margin-top:3em;font-size:.85rem;color:#6b7280}
+code{background:#f3f4f6;padding:2px 5px;border-radius:4px}</style></head><body><nav><a href="index.html">Home</a><a href="connect.html">Connect</a><a href="eula.html">License</a><a href="privacy.html">Privacy</a></nav><h1>Finishing connection…</h1>
+<p id="m">Sending the authorization to the RCBS Dashboard running on this computer.</p>
+<script>
+// Intuit doesn't allow localhost redirect URIs in production, so it sends the user here
+// and this page passes code/state/realmId on to the local script (rcbs_quickbooks.py --autorizar).
+if (location.search) { location.replace('http://localhost:8788/callback' + location.search); }
+else { document.getElementById('m').textContent = 'No authorization data received. Run python rcbs_quickbooks.py --autorizar again.'; }
+</script><footer>RCBS Dashboard &middot; Reality Check Business Solutions &middot; Contact: admin@miamibeachaccountant.com &middot; Last updated: October 6, 2026</footer></body></html>
